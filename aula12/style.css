@@ -19,12 +19,13 @@ footer{
     color: white;
     text-align: center;
 }
-figure{
-    margin: auto;
-    width: 350px;
+
+section{
+    text-align: center;
+    padding: 8px;
 }
 img{
-    clip-path: circle(37% at 50% 50%);
+    clip-path: circle(47% at 50% 50%);
     text-align: center;
     margin: auto;
 }
