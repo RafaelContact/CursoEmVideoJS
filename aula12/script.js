@@ -1,14 +1,14 @@
 function loader(){
 var msg = window.document.getElementById('msg')
-var img = window.document.getElementById('photo')
+var img = window.document.getElementById('img')
 var date = new Date()
 var hour = date.getHours()
 msg.innerHTML = `Agora são ${hour} horas`
-if (hours >= 0 && hours < 12){
-    // bom dia 
-    } else if ( hours >= 12 && hours < 18){
-    // boa tarde 
+if (hour >= 0 && hour < 12){
+        img.src = '../asets/manha.png'
+    } else if ( hour >= 12 && hour < 18){
+        img.src = '../asets/tarde.png'
     } else {
-    // boa noite
+        img.src = '../asets/noite.png'
 }
 }
