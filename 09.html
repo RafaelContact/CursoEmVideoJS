@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        p{ 
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual país você mora ? </h1>
+    <input type="text" name="contry" id="contry" placeholder="Digite seu país">
+    <input type="submit" name="button" id="butoon" value="Verificar" onclick="obter()">
+    <p id="result"></p>
+
+    <script>
+
+        function obter(){
+        var contry = window.document.getElementById('contry').value
+        var result = window.document.getElementById('result')
+        var contry1 = String(contry.value)
+         if (contry = 'Brasil'){
+             result.innerHTML +=('<p>você é Brasileiro</p>')
+         } else{ 
+            result.innerHTML += ('<p>Você é estrangeiro!</p>')
+         }
+    }
+    </script>
+</body>
+</html>
