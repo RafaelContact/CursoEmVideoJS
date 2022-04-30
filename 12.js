@@ -1,9 +1,10 @@
-var hora = 8 
+var agora = new Date() 
+var hora = agora.getHours()
 console.log (`agora são exatamente ${hora} horas`)
-if (hora > 12){
+if (hora >= 12 && hora < 18){
     console.log('boa tarde')
 } else if ( hora >= 18 ){
     console.log('boa noite')
-} else if ( hora > 0){
+} else{
     console.log('bom dia')
 }
