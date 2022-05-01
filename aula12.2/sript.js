@@ -14,6 +14,7 @@ function verificar(){
         } else if (fsex[1].checked){
             genero = 'Mulher'
         }
+        res.getElementsByClassName.textAligne = 'center'
         res.innerHTML = `Detectamos ${genero} com ${idade} anos`
     }
 }
