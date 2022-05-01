@@ -24,8 +24,3 @@ section{
     text-align: center;
     padding: 8px;
 }
-img{
-    clip-path: circle(47% at 50% 50%);
-    text-align: center;
-    margin: auto;
-}
