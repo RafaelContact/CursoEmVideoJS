@@ -17,14 +17,16 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="saiu()">Interaja.. </div>
+    <div id="area"> 
+        Interaja.. 
+    </div>
 </body>
 <script>
-    var a = window.document.getElementById('area')
+    var a = window.document.getElementById("area")
 
-    a.addEventListner('click', clicar) // clicar é o nome da função e click é o evento
-    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseover', entrar)
     a.addEventListener('mouseout', saiu)
+    a.addEventListener('click', clicar)
 
     function clicar() {
         a.innerText = 'clicou'
