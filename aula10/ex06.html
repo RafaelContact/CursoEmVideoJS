@@ -21,6 +21,11 @@
 </body>
 <script>
     var a = window.document.getElementById('area')
+
+    a.addEventListner('click', clicar) // clicar é o nome da função e click é o evento
+    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseout', saiu)
+
     function clicar() {
         a.innerText = 'clicou'
         a.style.background = 'red'
