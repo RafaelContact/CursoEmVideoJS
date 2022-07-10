@@ -40,12 +40,6 @@ input:nth-child(7){
 
     box-shadow: inset 0 0 1rem rgba(255, 217, 0, 0.712), 0 0 0.8rem red;
 }
-#res{
-    background-color: blue;
-    width: 500px;
-    height: 20px;
-    color: white;
-}
 footer{
     font-size: 1.5rem;
     margin: 3rem;
