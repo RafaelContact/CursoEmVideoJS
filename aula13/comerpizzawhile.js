@@ -4,3 +4,6 @@
         comidas++
         console.log(`Comendo ${comidas} fatias.`)
     }
+
+
+    
