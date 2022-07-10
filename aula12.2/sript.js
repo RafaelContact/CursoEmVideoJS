@@ -3,13 +3,17 @@ function verificar(){
     var ano = data.getFullYear()
     var fano = document.getElementById('txtano')
     var res = document.querySelector('section#res')
+
     if (fano.value.length == 0 || Number(fano.value) > ano){
         window.alert('[ERRO]Verifique os dados e tente novamente')
+
     } else { 
         var fsex = document.getElementsByName('radsex')
         var idade = ano - Number(fano.value)
         var genero = '' // Repare como  aqui foi inserido um valor na variavel com os elementos radio, primeiro ela está vazia mas recebe os valores do if
+        
         var img = document.createElement('img')
+
         img.setAttribute('id', 'foto')
         if (fsex[0].checked){
             genero = 'Homem'
