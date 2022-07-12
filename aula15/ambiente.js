@@ -13,3 +13,4 @@ for(let pos=0; pos<num.length;pos++){
 for (let pos in num){
     console.log(`A posição ${pos} tem o valor ${num[pos]}`)
 }
+
