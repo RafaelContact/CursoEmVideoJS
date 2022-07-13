@@ -1,26 +1,32 @@
-var btn = window.document.getElementById('btn')
+var num = window.document.getElementById('num')
 var sel = window.document.getElementById('sel')
-btn.addEventListener('click', add)
+
 let values = []  // posso declarar o array vazio 
 
-function add (){
-    var num = window.document.getElementById('num').value
-    if ( numbers$(num) && inlist(num)) {
+var btn = window.document.getElementById('btn')
+btn.addEventListener('click', add)
 
+function isNumber(n){
+    if(Numver(n) > 1 && Number(n) <= 100){
+        return true
 
+    }else{
+        return false
     }
-    if(num.length == 0  ){ 
-        window.alert('valor invalido')
-    }
-    if ( num < 0 || num > 100 ){
-        window.alert('Digite outro valor')
-    }
-    else{
-        var item = document.createElement('option')
-        item.text = `Numero ${num} `
-        sel.appendChild(item)   
+}
 
-        }
-        
+function inlist(n, l){
+    if (l.indexOf(Number(n) != -1 ) ){
+        return true 
+    }else { 
+        return false
+    }
+}
 
+function add(){
+    if (isNumber(num.value) && inlist(num.value, valores)){
+
+    } else {
+        window.alert('Valor invalido ou já encontrado na lista.')
+    }
 }
