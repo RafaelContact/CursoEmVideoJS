@@ -27,13 +27,17 @@
 
 
 var sel = window.document.getElementById('sel') // select
-
-
 var btn = window.document.getElementById('btn') // botão de adicionar
+var valores = [] // toda vez que um função retorna um valor, essa variável global acrescenta mais um
+x = 0 // essa variável se incrementada recebe o valor que vem da função
 btn.addEventListener('click', add)
+
 
 function add(){
     var num = window.document.getElementById('num').value // input number, se eu declarar fora da função ela vai receber o valor do escopo global do carregamento
-    let values = [num]
-    console.log(values[0]) // aqui sempre vai receber na primeira posição
+    valores.push(num)
+    console.log(valores)
+    
+    
 }
+
