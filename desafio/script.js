@@ -3,11 +3,11 @@
 //condições
 //valores acima de 100 ou abaixo de 1 são invalidos e retornam um alerta
 // caixa vazia retorna alerta
-// valores repitidos  não são adicionados.
+//[x] valores repitidos  não são adicionados.
 
 // funcionalidades 
 // adiciona atravez do evento onclick os numeros no select
-// são adicionados dentro de um array local
+//[x] são adicionados dentro de um array local
 // os numeros adicionados estão em uma template string com frase dentro do select
 // ao adicionar um número a caixa de digitação é zerada.
 
@@ -35,9 +35,15 @@ btn.addEventListener('click', add)
 
 function add(){
     var num = window.document.getElementById('num').value // input number, se eu declarar fora da função ela vai receber o valor do escopo global do carregamento
-    valores.push(num)
-    console.log(valores)
+    var print = valores.indexOf(num)
+    if( print == -1){
+        valores.push(num)
+        console.log(valores)
+    }else{
+        window.alert('Valor incorreto ou já adicionado!')
+    }
     
+    console.log(print)
     
 }
 
