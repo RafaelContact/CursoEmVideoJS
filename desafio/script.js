@@ -9,7 +9,7 @@
 //[x] adiciona atravez do evento onclick os numeros no select
 //[x] são adicionados dentro de um array local
 //[x] os numeros adicionados estão em uma template string com frase dentro do select
-// ao adicionar um número a caixa de digitação é zerada.
+//[x] ao adicionar um número a caixa de digitação é zerada.
 
 // etapa 2
 
@@ -18,18 +18,18 @@
 // [x] se eu adicionar outros valores , os resultados são apagados da tela aguardando o evento click novamente
 
 // funcionalidades 
-// atravez do evento clicar ele retorna os seguintes valores na tela: 
+//[x] atravez do evento clicar ele retorna os seguintes valores na tela: 
 //[x] total de números cadastrados 
 //[x] o menor valor 
-// a soma de todos os valores
-// a media dos valores digitados
+// [x] a soma de todos os valores
+//[x]  a media dos valores digitados
 
 
 
 var sel = window.document.getElementById('sel') // select
 var btn = window.document.getElementById('btn') // botão de adicionar
 var valores = [] // toda vez que um função retorna um valor, essa variável global acrescenta mais um
-var x = 0 // essa variável se incrementada recebe o valor que vem da função
+ // essa variável se incrementada recebe o valor que vem da função
 let soma = 0
 var finish = window.document.getElementById('finish')
 btn.addEventListener('click', add)
@@ -45,8 +45,8 @@ function add(){
             option.innerHTML = `Adicionado número ${num}`
             sel.appendChild(option)
             res.innerHTML = ''
-            x++
-            
+            window.document.getElementById('num').value = ''
+            window.document.getElementById('num').focus()      
         }else{
             window.alert('Valor já adicionado!')
         }
@@ -57,18 +57,19 @@ function add(){
 }
 
 function result(){
-
+    valores.sort()
     if( valores.length <= 1){
         window.alert('[ERRO] Digite outros números tente novamente!')
     }else{
         res.innerHTML = `O total de número cadastrados foi de ${valores.length} <br>`
-        valores.sort()
-        res.innerHTML += `O menor número cadastrado foi de ${valores[0]} <br>`
+        var x = valores.length
+        res.innerHTML += `O menor número cadastrado foi de ${valores[0]} <br>` // está dando problema misturar numeros de um único digito com 2
         for( let y in valores){
           soma += Number(valores[y])
           console.log(valores[y])
         }
-        res.innerHTML += `A soma de todos os números é ${soma}`
+        res.innerHTML += `A soma de todos os números é ${soma} <br>`
+        res.innerHTML += `A média de todos os números é ${soma / x}`
         
     }
 
