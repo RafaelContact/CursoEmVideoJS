@@ -20,7 +20,7 @@
 // funcionalidades 
 // atravez do evento clicar ele retorna os seguintes valores na tela: 
 //[x] total de números cadastrados 
-// o menor valor 
+//[x] o menor valor 
 // a soma de todos os valores
 // a media dos valores digitados
 
@@ -29,7 +29,8 @@
 var sel = window.document.getElementById('sel') // select
 var btn = window.document.getElementById('btn') // botão de adicionar
 var valores = [] // toda vez que um função retorna um valor, essa variável global acrescenta mais um
-x = 0 // essa variável se incrementada recebe o valor que vem da função
+var x = 0 // essa variável se incrementada recebe o valor que vem da função
+let soma = 0
 var finish = window.document.getElementById('finish')
 btn.addEventListener('click', add)
 
@@ -40,12 +41,11 @@ function add(){
     if(num > 0 && num < 100 ){
         if( print == -1){
             valores.push(num)
-            console.log(valores)
-            console.log(print)
             var option = document.createElement('option')
             option.innerHTML = `Adicionado número ${num}`
             sel.appendChild(option)
             res.innerHTML = ''
+            x++
             
         }else{
             window.alert('Valor já adicionado!')
@@ -63,7 +63,13 @@ function result(){
     }else{
         res.innerHTML = `O total de número cadastrados foi de ${valores.length} <br>`
         valores.sort()
-        res.innerHTML += `O menor número cadastrado foi de ${valores[0]}`
+        res.innerHTML += `O menor número cadastrado foi de ${valores[0]} <br>`
+        for( let y in valores){
+          soma += Number(valores[y])
+          console.log(valores[y])
+        }
+        res.innerHTML += `A soma de todos os números é ${soma}`
+        
     }
 
 }
