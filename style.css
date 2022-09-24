@@ -4,11 +4,23 @@ body{
 h1{
     color: white;
     text-align: center;
+    visibility: hidden;    
+}
+figure{
+    margin: auto;
+    max-width: 450px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+img{
+    width: 280px;
 }
 p{
     color: white;
     max-width: 500px;
     margin: auto;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 div{
     border: 1px solid rgb(0, 0, 0);
